@@ -1,0 +1,8 @@
+Nell'invio di un pacchetto da una macchina facente parte di una rete ad un'altra vi e' un discorso di layering(stratificazione).
+Il pacchetto viene creato nel layer1(layer fisico), quindi il layer che detiene l'hardware della macchina che vuole comunicare viene inviato al secondo layer
+(layer datalink) che e' il layer che riconosce la macchina inviante mediante indirizzo mac(e' in grado di riconoscere anche la ricevente di una stessa rete ma in questo caso il pacchetto deve essere trasportato
+in una macchina presente in un'altra rete) per iniziare la terza fase.
+La terza fase e' il passaggio al terzo layer(network layer)ove vi e' un router che riconosce l'indirizzo ip della macchina comunicante e avvia un processo di "destratificazione" passando il pacchetto ad uno switch 
+della rete ricevente che inviera' il pacchetto al destinatario.
+
+nb:la prima volta che avviene questo processo l'operazione "ping ip generico" generera' solo il reply e non la ricezione poiche' la macchina ricevente dovra' prima "conoscere" la macchina inviante.
